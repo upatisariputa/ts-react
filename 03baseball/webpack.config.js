@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
@@ -14,14 +15,13 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loader: "awesome-typescript-loader",
-        exclude: path.join(__dirname, "node_modules"),
       },
     ],
   },
   plugins: [],
   output: {
+    filename: "app.js",
     path: path.join(__dirname, "dist"),
-    filename: "[name].js",
     publicPath: "/dist",
   },
 };
