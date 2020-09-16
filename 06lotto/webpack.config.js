@@ -11,17 +11,11 @@ module.exports = {
     app: "./client",
   },
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        loader: "awesome-typescript-loader",
-        exclude: path.join(__dirname, "node_modules"),
-      },
-    ],
+    rules: [{ test: /\.tsx?$/, loader: "awesome-typescript-loader" }],
   },
   plugins: [],
   output: {
-    filename: "[name].js",
+    filename: "app.js",
     path: path.join(__dirname, "dist"),
     publicPath: "/dist",
   },
